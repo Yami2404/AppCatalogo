@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catálogo de Productos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>🛍️ Catálogo de Productos</h1>
+    <input type="text" id="buscador" placeholder="Buscar productos...">
+  </header>
+
+  <section id="filtros">
+    <label for="categoriaFiltro" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">Filtrar por categoría</label>
+    <select id="categoriaFiltro">
+      <option value="">Todas las categorías</option>
+    </select>
+  </section>
+
+  <!-- Mensaje flotante -->
+  <div id="toast" class="toast">Mensaje</div>
+
+  <main id="catalogo"></main>
+  <div id="loader" style="height: 1px;"></div>
+
+<aside id="carrito">
+  <button id="toggle-carrito">▼</button>
+  <h2 id="carrito-titulo">Carrito 🧺 (0)</h2>
+  <ul id="items-carrito"></ul>
+  <p>Total: $<span id="total">0.00</span></p>
+  <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+</aside>
+
+
+  <script src="js/app.js"></script>
+</body>
+</html>
